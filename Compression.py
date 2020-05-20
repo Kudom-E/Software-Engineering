@@ -35,16 +35,13 @@ def compression(input_string):
 
 def optimization(input_string, chars_left, compression):
     temp = input_string  # temporary variable to store input
-    sub = 0
-    choice = compression(input_string)  # chosen the initial compress pre
     for i in range(len(input_string) - 1):  # i is the size of the input-1
         temp = temp[0:i:] + temp[i + remove_amount::]  # taking amount allowed to remove for optimum compression for 
         # every iteration 
         choice_len = len(compression(temp))  # holds number of characters in newly compressed
         if (chars_left - choice_len) > sub:
             sub = chars_left - choice_len  # hold the size of the smallest compressed so far
-            choice = compression(
-                temp)  # take smallest compressed comparing the difference in sizes against the initial compress
+            choice = compression(temp)  # take smallest compressed comparing the difference in sizes against the initial compress
             chosen_length = chars_left - sub
         i += remove_amount  # increase iterator by amount allowed before removing
         temp = input_string  # reset temporary to store input
