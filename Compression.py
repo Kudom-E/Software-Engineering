@@ -54,8 +54,7 @@ def optimization(input_string, chars_left, compression):
 
 if __name__ == "__main__":
     input_string = input("enter string:\n").upper()  # force all input to be capital to remove confusion
-    remove_amount = int(input(
-        "enter value to remove for optimization: "))  # take an integer input for number of characters to be removed 
+    remove_amount = int(input("enter value to remove for optimization: "))  # take an integer input for number of characters to be removed 
     # for optimization 
 
 print("\ninput has ", len(input_string), " characters")
