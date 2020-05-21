@@ -35,6 +35,7 @@ def compression(input_string):
 
 def optimization(input_string, chars_left, compression):
     temp = input_string  # temporary variable to store input
+    sub = 0
     for i in range(len(input_string) - 1):  # i is the size of the input-1
         temp = temp[0:i:] + temp[i + remove_amount::]  # taking amount allowed to remove for optimum compression for 
         # every iteration 
