@@ -28,8 +28,11 @@ def compression(input_string):
             else:
                 compressed_text += input_string[i]
             recursion_count = 1
-            if i == (len(input_string) - 2):
-                compressed_text += str(recursion_count) + input_string[i + 1]
+           if i == (len(input_string) - 2):
+                if recursion_count != 1:
+                    compressed_text += str(recursion_count) + input_string[i + 1]
+                else:
+                    compressed_text += input_string[i + 1]
     return compressed_text
 
 
